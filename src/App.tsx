@@ -1,11 +1,12 @@
-import './App.css'
+import './App.module.scss'
+import HeaderLayout from "./layouts/HeaderLayout/HeaderLayout.tsx";
 
 function App() {
 
   return (
-    <>
-      Hello
-    </>
+    <HeaderLayout>
+
+    </HeaderLayout>
   )
 }
 
