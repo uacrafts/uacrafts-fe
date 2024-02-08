@@ -1,0 +1,10 @@
+.mainImagesSection {
+  display: flex;
+  position: relative;
+  background-image: url("../../assets/img.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: calc(100vh - 78px);
+}
