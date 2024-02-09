@@ -1,0 +1,17 @@
+.btnCallback {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border-style: none;
+  background: #006E5D;
+  font-size: 16px;
+  color: #F7F8FA;
+  margin-top: 30px;
+  padding: 17px 30px 17px 30px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.btnCallback:hover {
+  background: #386562;
+}

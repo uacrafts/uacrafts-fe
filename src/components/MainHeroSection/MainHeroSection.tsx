@@ -1,10 +1,13 @@
 import styles from "./MainHeroSection.module.scss"
+import HeroSectionTitle from "../Title/HeroSectionTitle.tsx";
+import HeroSectionHero from "../Hero/HeroSectionHero.tsx";
+import BtnCallback from "../BtnCallback/BtnCallback.tsx";
 const MainHeroSection = () => {
     return (
         <div className={styles.mainHeroSection}>
-            <h1>Українське завжди
-                <span> краще</span>
-            </h1>
+            <HeroSectionHero />
+            <HeroSectionTitle />
+            <BtnCallback />
         </div>
     );
 };
