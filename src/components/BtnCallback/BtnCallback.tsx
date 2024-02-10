@@ -1,10 +1,23 @@
-import styles from "./BtnCallback.module.scss"
-const BtnCallback = () => {
-    return (
-        <div className={styles.btnCallback}>
-            Подзвоніть мені &#8594;
-        </div>
-    );
+import styles from "./BtnCallback.module.scss";
+import CallbackModal from "../modals/CallbackModal/CallbackModal.tsx";
+import React, { useState } from "react";
+const BtnCallback: React.FC = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  return (
+    <>
+      <div className={styles.btnCallback} onClick={openPopup}>
+        Подзвоніть мені &#8594;
+      </div>
+      <CallbackModal
+        isPopupOpen={isPopupOpen}
+        setIsPopupOpen={setIsPopupOpen}
+      />
+    </>
+  );
 };
 
 export default BtnCallback;
