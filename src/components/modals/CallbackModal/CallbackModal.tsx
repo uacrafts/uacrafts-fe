@@ -8,13 +8,16 @@ interface FormData {
   phone: string;
 }
 
-const CallbackModal: React.FC = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isPopupSuccessOpen, setIsPopupSuccessOpen] = useState(false);
+interface CallbackModalProps {
+  isPopupOpen: boolean;
+  setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-  const openPopup = () => {
-    setIsPopupOpen(true);
-  };
+const CallbackModal: React.FC<CallbackModalProps> = ({
+  isPopupOpen,
+  setIsPopupOpen,
+}) => {
+  const [isPopupSuccessOpen, setIsPopupSuccessOpen] = useState(false);
 
   const closePopup = () => {
     setIsPopupOpen(false);
@@ -67,9 +70,6 @@ const CallbackModal: React.FC = () => {
   return (
     <>
       <div className={styles.container}>
-        <button className={styles.openButton} onClick={openPopup}>
-          Open Popup
-        </button>
         <PopupModal isOpen={isPopupOpen} onClose={closePopup}>
           <div className={styles.popupContent}>
             <h2>Залишити номер телефону</h2>
