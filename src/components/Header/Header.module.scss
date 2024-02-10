@@ -1,6 +1,78 @@
 .wrapper {
-  padding: 30px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 120px;
   background: #1B4744;
   color: #AACAD2;
-
 }
+
+.header_links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  font-size: 14px;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.search {
+  position: relative;
+  height: 45px;
+  width: 400px;
+}
+
+.input {
+  border-radius: 2px 0 0 2px;
+  padding: 12px 20px 12px 44px;
+  width: 256px;
+  height: 100%;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 16px;
+  top: 12px;
+}
+
+.search_button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 144px;
+  height: 100%;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  background: #AACAD2;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1B4744;
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
