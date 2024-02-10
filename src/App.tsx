@@ -8,6 +8,7 @@ function App() {
     <>
       <HeaderLayout>
         <Main />
+        <CallbackModal />
       </HeaderLayout>
     </>
   );
