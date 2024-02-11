@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   width: 50vw;
-  height: calc(100vh - 78px);
-  padding-left: 11vw;
+  height: calc(100vh - 81px);
+  padding-left: 11vmin;
+}
+
+@media (max-width: 760px) {
+  .mainHeroSection {
+    width: 100vw;
+  }
 }
