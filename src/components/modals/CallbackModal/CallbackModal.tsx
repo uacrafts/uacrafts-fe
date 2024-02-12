@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import PopupModal from "../Modal/Modal.tsx";
 import styles from "./CallbackModal.module.scss";
 import CallbackSubmittedModal from "../CallbackSubmittedModal/CallbackSubmittedModal.tsx";
+import { useMutation } from "@apollo/client";
+import { CREATE_CALLBACK } from "../../../apollo/createCallback.ts";
 
 interface FormData {
   username: string;
@@ -18,6 +20,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
   setIsPopupOpen,
 }) => {
   const [isPopupSuccessOpen, setIsPopupSuccessOpen] = useState(false);
+  const [createCallback, { error, data }] = useMutation(CREATE_CALLBACK);
 
   const closePopup = () => {
     setIsPopupOpen(false);
@@ -59,9 +62,19 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
     // Set errors and prevent form submission if there are errors
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+    } else if (error) {
+      console.log("Error");
     } else {
       // Continue with form submission logic
-      console.log("Form submitted:", formData);
+      console.log("Form submitted:", data);
+      createCallback({
+        variables: {
+          input: {
+            name: formData.username,
+            phone: formData.phone,
+          },
+        },
+      });
       setIsPopupOpen(false);
       setIsPopupSuccessOpen(true);
     }
