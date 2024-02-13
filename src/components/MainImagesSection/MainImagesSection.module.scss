@@ -6,7 +6,16 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 50vw;
-  height: calc(100vh - 78px);
+  height: calc(100vh - 81px);
+}
+
+@media (max-width: 760px) {
+  .mainImagesSection,
+  .yaryloImage,
+  .leafImage,
+  .stillLifeImage {
+    visibility: hidden;
+  }
 }
 
 .yaryloImage {
@@ -15,10 +24,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 30vh;
-  height: 30vh;
+  width: calc((30vw + 30vh) / 2.7);
+  height: calc((30vw + 30vh) / 2.7);
   top: 3vh;
-  left: 34vh;
+  left: calc((30vw + 30vh) / 2.5);
   z-index: 100;
 }
 
@@ -28,8 +37,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 50vh;
-  height: 50vh;
+  width: calc((50vw + 50vh) / 2.8);
+  height: calc((50vw + 50vh) / 2.8);
   top: 20vh;
   left: 0;
   z-index: 90;
@@ -41,9 +50,9 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 25vh;
-  height: 30vh;
-  top: 56vh;
-  left: 40vh;
+  width: calc((25vw + 25vh) / 2.7);
+  height: calc((30vw + 30vh) / 2.7);
+  top: calc((55vw + 55vh) / 2.8);
+  left: calc((28vw + 28vh) / 2);
   z-index: 80;
 }
