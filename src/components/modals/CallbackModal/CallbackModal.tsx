@@ -83,6 +83,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
                   name="username"
                   value={formData.username}
                   onChange={handleChange}
+                  className={`${styles.input_normal} ${errors.username && styles.input_error}`}
                   placeholder="Введіть імʼя"
                 />
                 {isFormDirty && errors.username && (
@@ -99,6 +100,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  className={`${styles.input_normal} ${errors.phone && styles.input_error}`}
                   placeholder="( _ _ _ )  _ _ _  _ _  _ _"
                 />
                 {isFormDirty && errors.phone && (

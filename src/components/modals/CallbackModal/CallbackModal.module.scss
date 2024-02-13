@@ -44,6 +44,9 @@ input {
   &:active {
     border: 1px solid #1E88E5
   }
+  &.input_error {
+    border: 1px solid #F11C0E
+  }
 }
 
 .error_message {
