@@ -1,37 +1,67 @@
 .wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 120px;
+  padding: 18px 20px;
   background: #1B4744;
   font-family: Inter Tight, serif;
   color: #AACAD2;
+
+  @media screen and (min-width: 768px) {
+    padding: 18px 40px; /* Adjust padding for tablet screens */
+  }
+
+  @media screen and (min-width: 1030px) {
+    flex-direction: row;
+    padding: 18px 120px; /* Original padding for larger screens */
+  }
 }
 
 .header_links {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
+  display: none;
   font-size: 14px;
+  white-space: nowrap;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row; /* Restore the original layout for tablet and larger screens */
+    gap: 40px;
+  }
 }
+
 a:hover {
   opacity: 0.7;
 }
 
 .search {
+  display: flex;
+  flex-direction: row;
   position: relative;
   height: 45px;
-  width: 400px;
+  width: 100%; /* Make the search bar full width on smaller screens */
+
+  @media screen and (min-width: 768px) {
+    max-width: 400px; /* Limit the width for larger screens */
+  }
 }
 
 .input {
   border-radius: 2px 0 0 2px;
+  border: none;
   padding: 12px 20px 12px 44px;
-  width: 256px;
+  width: 100%; /* Make the input full width on smaller screens */
   height: 100%;
-  &:focus {
+  &:focus, &:hover {
     outline: none;
+    border: none;
     box-shadow: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 256px;
   }
 }
 
@@ -44,9 +74,6 @@ a:hover {
 }
 
 .search_button {
-  position: absolute;
-  right: 0;
-  top: 0;
   width: 144px;
   height: 100%;
   border: none;
