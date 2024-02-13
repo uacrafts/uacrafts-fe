@@ -15,12 +15,24 @@ interface CallbackModalProps {
   setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+interface CreateCallbackResult {
+  createCallback: {
+    status: boolean;
+    callback: {
+      id: number;
+      name: string;
+      phone: string;
+    };
+  };
+}
+
 const CallbackModal: React.FC<CallbackModalProps> = ({
   isPopupOpen,
   setIsPopupOpen,
 }) => {
   const [isPopupSuccessOpen, setIsPopupSuccessOpen] = useState(false);
-  const [createCallback, { error, data }] = useMutation(CREATE_CALLBACK);
+  const [createCallback, { error }] =
+    useMutation<CreateCallbackResult>(CREATE_CALLBACK);
 
   const closePopup = () => {
     setIsPopupOpen(false);
@@ -32,6 +44,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [mutationError, setMutationError] = useState<string | null>(null);
   const [isFormDirty, setIsFormDirty] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -66,7 +79,6 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
       console.log("Error");
     } else {
       // Continue with form submission logic
-      console.log("Form submitted:", data);
       createCallback({
         variables: {
           input: {
@@ -74,9 +86,19 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
             phone: formData.phone,
           },
         },
-      });
-      setIsPopupOpen(false);
-      setIsPopupSuccessOpen(true);
+      })
+        .then((mutationResult) => {
+          console.log(
+            "Submitted data: ",
+            mutationResult.data?.createCallback.status,
+          );
+          setIsPopupOpen(false);
+          setIsPopupSuccessOpen(true);
+        })
+        .catch((mutationError) => {
+          console.error("Mutation error:", mutationError);
+          setMutationError("Помилка при відправці форми. Спробуйте ще раз."); // Set error message
+        });
     }
   };
 
@@ -85,6 +107,9 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
       <div className={styles.container}>
         <PopupModal isOpen={isPopupOpen} onClose={closePopup}>
           <div className={styles.popupContent}>
+            {mutationError && (
+              <div className={styles.error_message}>{mutationError}</div>
+            )}
             <h2>Залишити номер телефону</h2>
             <p>Ми вам зателефонуємо найближчим часом</p>
             <form onSubmit={handleSubmit}>
