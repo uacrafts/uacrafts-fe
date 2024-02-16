@@ -1,30 +1,12 @@
 import React, { useState } from "react";
-import PopupModal from "../Modal/Modal.tsx";
+import PopupModal from "../../../lib/Modal/Modal.tsx";
 import styles from "./CallbackModal.module.scss";
 import CallbackSubmittedModal from "../CallbackSubmittedModal/CallbackSubmittedModal.tsx";
 import { useMutation } from "@apollo/client";
-import { CREATE_CALLBACK } from "../../../apollo/createCallback.ts";
-
-interface FormData {
-  username: string;
-  phone: string;
-}
-
-interface CallbackModalProps {
-  isPopupOpen: boolean;
-  setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-interface CreateCallbackResult {
-  createCallback: {
-    status: boolean;
-    callback: {
-      id: number;
-      name: string;
-      phone: string;
-    };
-  };
-}
+import { CREATE_CALLBACK } from "../../../lib/apollo/createCallback.ts";
+import { FormData } from "../../../types";
+import { CallbackModalProps } from "../../../types";
+import { CreateCallbackResult } from "../../../types";
 
 const CallbackModal: React.FC<CallbackModalProps> = ({
   isPopupOpen,

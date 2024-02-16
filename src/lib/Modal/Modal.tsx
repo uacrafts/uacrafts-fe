@@ -1,15 +1,9 @@
 import React from "react";
 import Modal from "react-modal";
-
 import styles from "./Modal.module.scss";
+import { PopupModalProps } from "../../types";
 
 Modal.setAppElement("#root");
-
-interface PopupModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  children: React.ReactNode;
-}
 
 const PopupModal: React.FC<PopupModalProps> = ({
   isOpen,
