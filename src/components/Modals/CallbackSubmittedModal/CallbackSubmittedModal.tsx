@@ -1,13 +1,9 @@
 // YourMainComponent.tsx
 import React from "react";
-import PopupModal from "../Modal/Modal.tsx";
+import PopupModal from "../../../lib/Modal/Modal.tsx";
 import styles from "./CallbackSubmittedModal.module.scss";
 import SuccessMark from "../../../assets/Successmark.png";
-
-interface CallbackSubmittedModalProps {
-  isPopupSuccessOpen: boolean;
-  setIsPopupSuccessOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { CallbackSubmittedModalProps } from "../../../types";
 
 const CallbackSubmittedModal: React.FC<CallbackSubmittedModalProps> = ({
   isPopupSuccessOpen,
