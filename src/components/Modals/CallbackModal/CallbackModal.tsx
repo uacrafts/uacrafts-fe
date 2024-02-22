@@ -44,6 +44,12 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
     e.preventDefault();
 
     const newErrors: Record<string, string> = {};
+
+    const nameRegex = /^[a-zA-Z0-9]+$/;
+    if (!formData.username.match(nameRegex)) {
+      newErrors.username = "Ім'я не може включати спеціальні символи";
+    }
+
     if (formData.username.length > 20) {
       newErrors.username = "Ім'я не має бути довшим за 20 символів";
     }
