@@ -45,7 +45,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
 
     const newErrors: Record<string, string> = {};
 
-    const nameRegex = /^[a-zA-Z0-9]+$/;
+    const nameRegex = /^[a-zA-Z0-9]*$/;
     if (!formData.username.match(nameRegex)) {
       newErrors.username = "Ім'я не може включати спеціальні символи";
     }
@@ -63,8 +63,6 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
     // Set errors and prevent form submission if there are errors
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-    } else if (error) {
-      console.log("Error");
     } else {
       // Continue with form submission logic
       createCallback({
@@ -80,11 +78,13 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
             "Submitted data: ",
             mutationResult.data?.createCallback.status,
           );
+          setMutationError(null);
           setIsPopupOpen(false);
           setIsPopupSuccessOpen(true);
         })
         .catch((mutationError) => {
           console.error("Mutation error:", mutationError);
+          console.log(error);
           setMutationError("Помилка при відправці форми. Спробуйте ще раз."); // Set error message
         });
     }
@@ -136,7 +136,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
               <button
                 className={styles.submit_button}
                 type="submit"
-                disabled={!isFormDirty} // Disable button until the form is dirty
+                disabled={formData.phone.trim() === ""} // Disable button until the form is dirty
               >
                 Відправити
               </button>
