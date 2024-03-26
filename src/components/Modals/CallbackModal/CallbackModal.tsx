@@ -44,6 +44,12 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
     e.preventDefault();
 
     const newErrors: Record<string, string> = {};
+
+    const nameRegex = /^[a-zA-Z0-9\u0400-\u04FF]*$/;
+    if (!formData.username.match(nameRegex)) {
+      newErrors.username = "Ім'я не може включати спеціальні символи";
+    }
+
     if (formData.username.length > 20) {
       newErrors.username = "Ім'я не має бути довшим за 20 символів";
     }
@@ -57,8 +63,6 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
     // Set errors and prevent form submission if there are errors
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-    } else if (error) {
-      console.log("Error");
     } else {
       // Continue with form submission logic
       createCallback({
@@ -74,14 +78,46 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
             "Submitted data: ",
             mutationResult.data?.createCallback.status,
           );
+          setMutationError(null);
           setIsPopupOpen(false);
           setIsPopupSuccessOpen(true);
+          // Reset the form after successful submission
+          setFormData({ username: "", phone: "" });
         })
         .catch((mutationError) => {
           console.error("Mutation error:", mutationError);
+          console.log(error);
           setMutationError("Помилка при відправці форми. Спробуйте ще раз."); // Set error message
         });
     }
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const newErrors: Record<string, string> = {};
+
+    switch (name) {
+      case "username":
+        const nameRegex = /^[a-zA-Z0-9\u0400-\u04FF]*$/;
+        if (!value.match(nameRegex)) {
+          newErrors.username = "Ім'я не може включати спеціальні символи";
+        }
+        if (value.length > 20) {
+          newErrors.username = "Ім'я не має бути довшим за 20 символів";
+        }
+        break;
+      case "phone":
+        const phoneRegex = /^\+380\d{9}$/; // Assumes a Ukrainian number starting with +380
+        if (!value.match(phoneRegex)) {
+          newErrors.phone = "Невірно набраний номер телефону";
+        }
+        break;
+      default:
+        break;
+    }
+
+    // Update errors state based on validation results
+    setErrors((prevErrors) => ({ ...prevErrors, ...newErrors }));
   };
 
   return (
@@ -103,6 +139,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
                   name="username"
                   value={formData.username}
                   onChange={handleChange}
+                  onBlur={handleBlur}
                   className={`${styles.input_normal} ${errors.username && styles.input_error}`}
                   placeholder="Введіть імʼя"
                 />
@@ -120,6 +157,7 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  onBlur={handleBlur}
                   className={`${styles.input_normal} ${errors.phone && styles.input_error}`}
                   placeholder="( _ _ _ )  _ _ _  _ _  _ _"
                 />
@@ -130,7 +168,10 @@ const CallbackModal: React.FC<CallbackModalProps> = ({
               <button
                 className={styles.submit_button}
                 type="submit"
-                disabled={!isFormDirty} // Disable button until the form is dirty
+                disabled={
+                  Object.values(errors).some((error) => error !== "") ||
+                  formData.phone.trim() === ""
+                } // Disable button until the form is dirty
               >
                 Відправити
               </button>
