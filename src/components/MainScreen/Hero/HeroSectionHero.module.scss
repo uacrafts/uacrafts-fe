@@ -2,18 +2,10 @@
 
 .heroSectionHero {
   font-family: Unbounded, sans-serif;
-  font-size: calc((10vw + 10vh) / 9);
-  font-weight: 400;
-  line-height: 2.6em;
+  font-size: calc((10vw + 10vh) / 4);
+  //font-size: 96px;
+  font-weight: 500;
+  //line-height: 2.6em;
   color: #1B4744;
-  margin: 30vh 20px 15px 0;
-}
-
-.heroSectionHero span {
-  background: #AACAD2;
-  border-radius: 20px;
-  display: inline-block;
-  padding-left: calc((2vw + 2vh) / 2.4);
-  padding-right: calc((2vw + 2vh) / 2.4);
-  height: calc((7vw + 6vh) / 2);
+  margin: 0 0 0 4vw;
 }
