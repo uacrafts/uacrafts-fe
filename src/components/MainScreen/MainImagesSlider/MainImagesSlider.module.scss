@@ -1,0 +1,44 @@
+.mainImagesSlider {
+  width: 60vw;
+  margin-left: 12vmin;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+//@media (max-width: 760px) {
+//  .mainImagesSection,
+//  .yaryloImage,
+//  .leafImage,
+//  .stillLifeImage {
+//    visibility: hidden;
+//  }
+//}
+
+
+
+.leafsImage {
+  background-image: url("../../../assets/images/leafs.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc((50vw + 50vh) / 2.8);
+  height: calc((50vw + 50vh) / 5);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.tablewareImage {
+  background-image: url("../../../assets/images/Tableware.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc((50vw + 50vh) / 2.8);
+  height: calc((50vw + 50vh) / 5);
+  overflow: hidden;
+  border-radius: 15px;
+}

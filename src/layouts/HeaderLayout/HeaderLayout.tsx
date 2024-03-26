@@ -1,4 +1,4 @@
-import Header from "../../components/Header/Header.tsx";
+import Header from "../../components/MainScreen/Header/Header.tsx";
 import {PropsWithChildren} from "react";
 
 const HeaderLayout = ({children}:PropsWithChildren) => {

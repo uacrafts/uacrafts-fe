@@ -1,5 +1,46 @@
 .main {
   display: flex;
+  flex-direction: column;
   overflow: hidden;
   user-select: none;
+}
+
+.mainScreen {
+ display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content min-content 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Title Title ImageArea"
+    "SubTitle SubTitle ImageArea"
+    "BtnArea BtnArea ImageArea"
+    "SliderArea SliderArea ImageArea";
+}
+
+.Title {
+  grid-area: Title;
+}
+
+.SubTitle {
+  grid-area: SubTitle;
+}
+
+.BtnArea {
+  grid-area: BtnArea;
+}
+
+.SliderArea {
+  grid-area: SliderArea;
+}
+
+.ImageArea {
+  grid-area: ImageArea;
+  background-image: url("../../assets/images/Foto.png");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  width: calc((40vw + 40vh) / 2);
+  height: calc((51vw + 51vh) / 2);
+  margin: 27px 80px 50px 0;
 }

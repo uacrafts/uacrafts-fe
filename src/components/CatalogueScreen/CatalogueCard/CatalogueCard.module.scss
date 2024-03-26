@@ -1,0 +1,41 @@
+//$backgroundImage: "../../assets/images/Rectangle 8.png";
+
+.catalogueCard {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 100%;
+  border-radius: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+
+//.imageCard {
+//  width: 400px;
+//  height: 400px;
+//  background-image: url($backgroundImage);
+//  background-position: center;
+//  background-size: cover;
+//  background-repeat: no-repeat;
+//}
+
+.catalogueCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.catalogueCard h3 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  background: rgba(99, 118, 116, 0.8);
+  font-family: Roboto, sans-serif;
+  font-size: 18.01px;
+  font-weight: 500;
+  line-height: 21.62px;
+  text-align: left;
+  color: rgba(252, 252, 252, 1);
+}

@@ -1,0 +1,29 @@
+.mainHeroSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: calc(100vh - 81px - 270px);
+  padding-left: 11vmin;
+}
+
+.mainHeroContainer {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+}
+
+.mainImage {
+  background-image: url("../../../assets/images/Foto.png");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  width: calc((40vw + 40vh) / 2);
+  height: calc((51vw + 51vh) / 2);
+  margin: 27px 0 0 0;
+}
+
+//@media (max-width: 760px) {
+//  .mainHeroSection {
+//    width: 100vw;
+//  }
+//}
