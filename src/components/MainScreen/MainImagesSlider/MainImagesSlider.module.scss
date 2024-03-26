@@ -1,25 +1,16 @@
 .mainImagesSlider {
-  width: 60vw;
-  margin-left: 12vmin;
+  width: 100%;
 }
 
 .slider {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 
-//@media (max-width: 760px) {
-//  .mainImagesSection,
-//  .yaryloImage,
-//  .leafImage,
-//  .stillLifeImage {
-//    visibility: hidden;
-//  }
-//}
-
-
+.slider div {
+  cursor: pointer;
+}
 
 .leafsImage {
   background-image: url("../../../assets/images/leafs.png");

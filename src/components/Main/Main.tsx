@@ -1,5 +1,4 @@
 import styles from "./Main.module.scss"
-// import MainHeroSection from "../MainScreen/MainHeroSection/MainHeroSection.tsx";
 import WaterMark from "../MainScreen/WaterMark/WaterMark.tsx";
 import MainImagesSlider from "../MainScreen/MainImagesSlider/MainImagesSlider.tsx";
 import Catalogue from "../Catalogue/Catalogue.tsx";
@@ -32,11 +31,3 @@ const Main = () => {
 };
 
 export default Main;
-
-// <div className="container">
-//     <div className="Title"></div>
-//     <div className="SubTitle"></div>
-//     <div className="BtnArea"></div>
-//     <div className="SliderArea"></div>
-//     <div className="ImageArea"></div>
-// </div>

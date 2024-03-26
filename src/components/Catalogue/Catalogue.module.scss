@@ -1,8 +1,9 @@
 .catalogue {
   height: 710px;
   display: grid;
+  margin: 0 80px 0 80px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, max-content);
   grid-gap: 10px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -13,12 +14,12 @@
 
 .Title {
   grid-area: Title;
-  margin-left: 77px;
+  margin: 50px 0 50px 0;
 }
 
 .Nav {
   grid-area: Nav;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .Nav,
@@ -28,7 +29,7 @@
 }
 
 .Nav div {
-  margin: 10px;
+  margin: 6px;
 }
 
 .Item1 {
