@@ -10,7 +10,7 @@ import wool from "../../assets/images/wool.png"
 
 const Catalogue = () => {
     return (
-        <div className={styles.catalogue}>
+        <div id={"catalog"} className={styles.catalogue}>
                 <div className={styles.Title}>
                     <SectionTitle title="Каталог" />
                 </div>
