@@ -5,6 +5,7 @@ import Catalogue from "../Catalogue/Catalogue.tsx";
 import HeroSectionHero from "../MainScreen/Hero/HeroSectionHero.tsx";
 import HeroSectionTitle from "../MainScreen/Title/HeroSectionTitle.tsx";
 import BtnScrollDown from "../buttons/BtnScrollDown/BtnScrollDown.tsx";
+import Bestsellers from "../Bestsellers/Beastsellers.tsx";
 
 const Main = () => {
     return (
@@ -25,7 +26,8 @@ const Main = () => {
                 </div>
                 <div className={styles.ImageArea}></div>
             </div>
-            <Catalogue/>
+            <Catalogue />
+            <Bestsellers />
         </div>
     );
 };

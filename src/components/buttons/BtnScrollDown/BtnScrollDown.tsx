@@ -1,5 +1,6 @@
 import styles from "./BtnScrollDown.module.scss"
 import Button from '../../../assets/images/Button.svg'
+
 const BtnScrollDown = () => {
     // const catalog
     return (
