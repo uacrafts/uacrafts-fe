@@ -1,0 +1,35 @@
+.mainImagesSlider {
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.slider div {
+  cursor: pointer;
+}
+
+.leafsImage {
+  background-image: url("../../../assets/images/leafs.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc((50vw + 50vh) / 2.8);
+  height: calc((50vw + 50vh) / 5);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.tablewareImage {
+  background-image: url("../../../assets/images/Tableware.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc((50vw + 50vh) / 2.8);
+  height: calc((50vw + 50vh) / 5);
+  overflow: hidden;
+  border-radius: 15px;
+}

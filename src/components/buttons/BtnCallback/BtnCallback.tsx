@@ -1,5 +1,5 @@
 import styles from "./BtnCallback.module.scss";
-import CallbackModal from "../Modals/CallbackModal/CallbackModal.tsx";
+import CallbackModal from "../../Modals/CallbackModal/CallbackModal.tsx";
 import React, { useState } from "react";
 const BtnCallback: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);

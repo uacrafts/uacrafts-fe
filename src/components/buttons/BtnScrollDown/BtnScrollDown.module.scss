@@ -1,0 +1,10 @@
+.btnScrollDown img {
+  width: calc((50vw + 50vh)/13);
+  height: calc((50vw + 50vh)/13);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.btnScrollDown img:hover {
+  transform: scale(1.1);
+}

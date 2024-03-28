@@ -1,5 +1,47 @@
-.main {
+.mainScreen {
+ display: grid;
+  grid-template-columns: 1fr 1fr min-content;
+  grid-template-rows: min-content min-content min-content 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Title Title ImageArea"
+    "SubTitle SubTitle ImageArea"
+    "BtnArea BtnArea ImageArea"
+    "SliderArea SliderArea ImageArea";
+}
+
+.Title {
+  grid-area: Title;
+  padding: 25px 0 0 169px;
+}
+
+.SubTitle {
+  grid-area: SubTitle;
+  padding: 0 125px 7px 150px;
+}
+
+.BtnArea {
+  grid-area: BtnArea;
   display: flex;
-  overflow: hidden;
-  user-select: none;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.SliderArea {
+  grid-area: SliderArea;
+  padding: 20px 10px 50px 63px;
+
+}
+
+.ImageArea {
+  grid-area: ImageArea;
+  background-image: url("../../assets/images/Foto.png");
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  width: calc((40vw + 40vh) / 2);
+  height: calc((51vw + 51vh) / 2);
+  margin: 27px 80px 50px 0;
+  cursor: pointer;
 }

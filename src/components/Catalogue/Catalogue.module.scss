@@ -1,0 +1,53 @@
+.catalogue {
+  height: 710px;
+  display: grid;
+  margin: 0 80px 0 80px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, max-content);
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Title Title Nav"
+    "Item1 Item2 Item3"
+    "Item1 Item4 Item5";
+}
+
+.Title {
+  grid-area: Title;
+  margin: 50px 0 50px 0;
+}
+
+.Nav {
+  grid-area: Nav;
+  justify-content: flex-end;
+}
+
+.Nav,
+.Title {
+  display: flex;
+  align-items: center;
+}
+
+.Nav div {
+  margin: 6px;
+}
+
+.Item1 {
+  grid-area: Item1;
+}
+
+.Item2 {
+  grid-area: Item2;
+}
+
+.Item3 {
+  grid-area: Item3;
+}
+
+.Item4 {
+  grid-area: Item4;
+}
+
+.Item5 {
+  grid-area: Item5;
+}

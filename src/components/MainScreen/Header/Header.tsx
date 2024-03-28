@@ -5,19 +5,19 @@ const Header = () => {
       <div>Logo</div>
       <ul className={styles.header_links}>
         <li>
-          <a href="/">Категорії</a>
+          <a href="/public">Категорії</a>
         </li>
         <li>
-          <a href="/">Лідери продажу</a>
+          <a href="/public">Лідери продажу</a>
         </li>
         <li>
-          <a href="/">Кабінет</a>
+          <a href="/public">Кабінет</a>
         </li>
         <li>
-          <a href="/">Про магазин</a>
+          <a href="/public">Про магазин</a>
         </li>
         <li>
-          <a href="/">Контакти</a>
+          <a href="/public">Контакти</a>
         </li>
       </ul>
       <div className={styles.search}>

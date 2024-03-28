@@ -1,0 +1,25 @@
+.btnRectangle {
+  width: 188px;
+  line-height: 52px;
+  border: 0.75px solid rgba(98, 124, 122, 1);
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  tab-index: 0;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.btnRectangle h3 {
+  font-family: Roboto, sans-serif;
+  font-size: 18.01px;
+  font-weight: 500;
+  line-height: 21.62px;
+  color: rgba(54, 64, 88, 1);
+}
+
+.btnRectangle:focus,
+.btnRectangle:hover {
+  background-color: rgba(149, 177, 174, 1);
+}

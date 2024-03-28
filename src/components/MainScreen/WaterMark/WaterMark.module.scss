@@ -1,0 +1,12 @@
+.waterMark {
+  display: flex;
+  position: absolute;
+  background-image: url("../../../assets/images/FonCraftLand.png");
+  background-position: 0 35%;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  width: 96vw;
+  height: calc(100vh - 81px);
+  left: 1vw;
+  z-index: -5;
+}
