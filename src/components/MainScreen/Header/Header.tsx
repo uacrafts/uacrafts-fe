@@ -5,7 +5,7 @@ const Header = () => {
       <div className={styles.logo}>
         <a href="/">
           <img
-            src="/src/assets/images/Logo.svg"
+            src="./src/assets/images/Logo.svg"
             alt="Logo"
             width="122"
             height="23"
@@ -52,13 +52,13 @@ const Header = () => {
         </svg>
         <input id="search" type="text" className={styles.input} />
         <img
-          src="/src/assets/images/FavHeart.svg"
+          src="./src/assets/images/FavHeart.svg"
           alt="Fav"
           width={20}
           height={20}
         />
         <img
-          src="/src/assets/images/CartIcon.svg"
+          src="./src/assets/images/CartIcon.svg"
           alt="Cart"
           width={20}
           height={20}
