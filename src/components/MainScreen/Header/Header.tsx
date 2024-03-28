@@ -2,19 +2,25 @@ import styles from "./Header.module.scss";
 const Header = () => {
   return (
     <div className={styles.wrapper}>
-      <div>Logo</div>
+      <div className={styles.logo}>
+        <a href="/">
+          <img
+            src="/src/assets/images/Logo.svg"
+            alt="Logo"
+            width="122"
+            height="23"
+          />
+        </a>
+      </div>
       <ul className={styles.header_links}>
         <li>
-          <a href="/public">Категорії</a>
+          <a href="#catalog">Каталог</a>
         </li>
         <li>
-          <a href="/public">Лідери продажу</a>
+          <a href="/public">Новинки</a>
         </li>
         <li>
-          <a href="/public">Кабінет</a>
-        </li>
-        <li>
-          <a href="/public">Про магазин</a>
+          <a href="/public">Доставка та оплата</a>
         </li>
         <li>
           <a href="/public">Контакти</a>
@@ -22,35 +28,41 @@ const Header = () => {
       </ul>
       <div className={styles.search}>
         <svg
-          width="20"
-          height="21"
-          viewBox="0 0 20 21"
+          width="21"
+          height="20"
+          viewBox="0 0 21 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={styles.icon}
         >
           <path
-            d="M9.5 16.5C13.0899 16.5 16 13.5899 16 10C16 6.41015 13.0899 3.5 9.5 3.5C5.91015 3.5 3 6.41015 3 10C3 13.5899 5.91015 16.5 9.5 16.5Z"
-            stroke="#1A1A1A"
+            d="M9.91014 15.8667C13.7393 15.8667 16.8435 12.7625 16.8435 8.93333C16.8435 5.10416 13.7393 2 9.91014 2C6.08096 2 2.97681 5.10416 2.97681 8.93333C2.97681 12.7625 6.08096 15.8667 9.91014 15.8667Z"
+            stroke="#364058"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M18 18.5L14 14.5"
-            stroke="#1A1A1A"
+            d="M18.9766 17.9996L14.71 13.7329"
+            stroke="#364058"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
-        <input
-          id="search"
-          type="text"
-          className={styles.input}
-          placeholder="Я шукаю"
+        <input id="search" type="text" className={styles.input} />
+        <img
+          src="/src/assets/images/FavHeart.svg"
+          alt="Fav"
+          width={20}
+          height={20}
         />
-        <button className={styles.search_button}>Пошук</button>
+        <img
+          src="/src/assets/images/CartIcon.svg"
+          alt="Cart"
+          width={20}
+          height={20}
+        />
       </div>
     </div>
   );
