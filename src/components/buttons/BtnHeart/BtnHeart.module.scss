@@ -1,0 +1,73 @@
+.btnHeartContainer {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.border {
+  box-sizing: border-box;
+  left: 0;
+  width: 21px;
+  height: 16px;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.heart {
+  top: 6.7%;
+  left: 9%;
+  width: 17px;
+  height: 14px;
+  position: absolute;
+  z-index: 2;
+}
+
+//.heart:hover {
+//  cursor: pointer;
+  //background-color: rgba(149, 177, 174, 1);
+//}
+
+.border::before,
+.border::after,
+.heart::before,
+.heart::after {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 100%;
+  top: -50%;
+  border-radius: 50px 50px 0 0;
+}
+
+.border::before,
+.border::after {
+  border: 4px solid rgba(54, 64, 88, 1);
+}
+
+.heart::before,
+.heart::after {
+  background-color: #FFFFFF;
+}
+.btnHeartContainer:hover .heart::before,
+.btnHeartContainer:hover .heart::after {
+  cursor: pointer;
+  background-color: rgba(149, 177, 174, 1);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.border::before,
+.heart::before {
+  left: 19%;
+  transform: rotate(45deg);
+  transform-origin: 0 100%;
+
+}
+
+.border::after,
+.heart::after {
+  left: 40%;
+  transform: rotate(-45deg);
+  transform-origin: 100% 100%;
+}
+
