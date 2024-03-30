@@ -24,11 +24,6 @@
   justify-content: space-evenly;
 }
 
-//.nav:first-child {
-//  background: rgba(149, 177, 174, 1);
-//;
-//}
-
 .card-area2 {
   grid-area: cardArea2;
 }
@@ -43,4 +38,11 @@
 
 .card-area4 {
   grid-area: cardArea4;
+}
+
+.card-area1,
+.card-area2,
+.card-area3,
+.card-area4 {
+  display: flex;
 }
