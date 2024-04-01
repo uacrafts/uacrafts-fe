@@ -7,7 +7,7 @@ const FeedbackCard: FC<Feedback> = ({ avatar, name, nickname, comment }) => {
     <div className={styles.cardWrapper}>
       <div className={styles.cardTop}>
         <div className={styles.avatar}>
-          <img src={`/src/assets/images/${avatar}`} alt="avatar" />
+          <img src={`./src/assets/images/${avatar}`} alt="avatar" />
         </div>
         <div className={styles.name}>
           <p>{name}</p>
