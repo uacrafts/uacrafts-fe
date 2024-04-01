@@ -31,3 +31,10 @@ export type CallbackSubmittedModalProps = {
   isPopupSuccessOpen: boolean;
   setIsPopupSuccessOpen: Dispatch<SetStateAction<boolean>>;
 };
+
+export type Feedback = {
+  avatar: string;
+  name: string;
+  nickname: string;
+  comment: string;
+};

@@ -1,0 +1,53 @@
+
+.cardWrapper {
+  border-radius: 8px;
+  width: 100%;
+  min-height: 100%;
+  background: #eaefef;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #343d55;
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0 26px 15px;
+}
+
+.avatar {
+
+}
+
+.name {
+  padding: 4px 0 0 16px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 120%;
+  color: #1b4744;
+}
+
+.nickname {
+  padding-top: 8px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+
+.cardMessage {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  padding-left: 41px;
+  padding-bottom: 30px;
+  padding-right: 5px;
+}
+
+.quote {
+  position: absolute;
+  left: 9px;
+  top: -10px;
+}
+
