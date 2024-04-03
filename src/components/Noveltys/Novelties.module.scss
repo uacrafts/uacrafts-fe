@@ -1,6 +1,5 @@
 .novelties {
   height: 655px;
-  margin: 0 80px 0 80px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: min-content min-content 1fr;
@@ -24,25 +23,27 @@
   justify-content: space-evenly;
 }
 
-.card-area2 {
-  grid-area: cardArea2;
-}
-
-.card-area1 {
+.cardArea1 {
   grid-area: cardArea1;
 }
 
-.card-area3 {
+.cardArea2 {
+  grid-area: cardArea2;
+}
+
+.cardArea3 {
   grid-area: cardArea3;
 }
 
-.card-area4 {
+.cardArea4 {
   grid-area: cardArea4;
 }
 
-.card-area1,
-.card-area2,
-.card-area3,
-.card-area4 {
+.cardArea1,
+.cardArea2,
+.cardArea3,
+.cardArea4 {
   display: flex;
+  //justify-content: center;
+  //align-content: center;
 }
