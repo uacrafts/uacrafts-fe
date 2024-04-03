@@ -8,6 +8,10 @@
   justify-content: space-around;
 }
 
+.slider :first-child {
+  margin-right: 1.66vw;
+}
+
 .slider div {
   cursor: pointer;
 }
