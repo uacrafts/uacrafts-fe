@@ -1,11 +1,16 @@
 .main {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 98vw;
+  margin: 0 auto;
+  padding: 0 5.55vw;
 }
 
 .mainScreen {
  display: grid;
   grid-template-columns: 1fr 1fr min-content;
-  grid-template-rows: min-content min-content min-content 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
   gap: 10px 10px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -17,24 +22,24 @@
 
 .Title {
   grid-area: Title;
-  padding: 25px 0 0 169px;
+  padding: 3.5vh 0 0 5.55vw;
 }
 
 .SubTitle {
   grid-area: SubTitle;
-  padding: 0 125px 7px 150px;
+  padding: 0 6vw 1vh 6vw;
 }
 
 .BtnArea {
   grid-area: BtnArea;
   display: flex;
   justify-content: center;
-  padding-left: 50px;
+  padding-left: 3.47vw;
 }
 
 .SliderArea {
   grid-area: SliderArea;
-  padding: 20px 10px 50px 63px;
+  padding: 2.8vh 0.7vw 50px 4.375vw;
 
 }
 
@@ -46,6 +51,6 @@
   background-repeat: no-repeat;
   width: calc((40vw + 40vh) / 2);
   height: calc((51vw + 51vh) / 2);
-  margin: 27px 80px 50px 0;
+  margin: 3.8vh 5.55vw 50px 0;
   cursor: pointer;
 }
