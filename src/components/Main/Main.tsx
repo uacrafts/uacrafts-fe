@@ -8,6 +8,7 @@ import BtnScrollDown from "../buttons/BtnScrollDown/BtnScrollDown.tsx";
 import Bestsellers from "../Bestsellers/Beastsellers.tsx";
 import Feedback from "../Feedback/Feedback.tsx";
 import Novelties from "../Noveltys/Novelties.tsx";
+import Brands from "../Brands/Brands.tsx";
 
 const Main = () => {
   return (
@@ -31,6 +32,7 @@ const Main = () => {
       <Catalogue />
       <Bestsellers />
       <Novelties />
+      <Brands />
       <Feedback />
     </div>
   );

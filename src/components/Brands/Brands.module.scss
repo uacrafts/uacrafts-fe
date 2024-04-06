@@ -1,0 +1,35 @@
+.brands {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  margin: 0 80px 0 80px;
+}
+
+.title {
+  grid-area: title;
+  margin: 50px 0 50px 0;
+}
+
+.container {
+  width: 86.88vw;
+  height: 142px;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 142px;
+  background-color: #95B1AE;
+  top: 0;
+  left: -80px;
+  z-index: -1;
+}
+
+.sliderBrands {
+  height: 142px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
