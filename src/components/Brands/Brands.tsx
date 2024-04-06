@@ -21,7 +21,6 @@ const Brands = () => {
                     <img src={brand4} alt="Fourth brand"/>
                     <img src={brand5} alt="Fifth brand"/>
                     <img src={brand6} alt="Sixth brand"/>
-
                 </div>
             </div>
 
