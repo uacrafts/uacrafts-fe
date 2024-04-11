@@ -1,16 +1,16 @@
-.mainImagesSlider {
-  width: 100%;
-}
+//.mainImagesSlider {
+  //width: 100%;
+//}
 
 .slider {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.slider :first-child {
-  margin-right: 1.66vw;
-}
+//.slider :first-child {
+//  margin-right: 24px;
+//}
 
 .slider div {
   cursor: pointer;
@@ -21,10 +21,13 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: calc((50vw + 50vh) / 2.8);
-  height: calc((50vw + 50vh) / 5);
+  //width: calc((50vw + 50vh) / 2.8);
+  width: 427px;
+  height: 224px;
+  //height: calc((50vw + 50vh) / 5);
   overflow: hidden;
   border-radius: 15px;
+  margin-right: 24px;
 }
 
 .tablewareImage {
@@ -32,8 +35,9 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: calc((50vw + 50vh) / 2.8);
-  height: calc((50vw + 50vh) / 5);
+  width: 427px;
+  height: 224px;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 8px;
+  margin-right: 24px;
 }

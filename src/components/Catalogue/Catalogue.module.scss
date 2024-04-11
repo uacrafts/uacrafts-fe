@@ -1,11 +1,12 @@
 .catalogue {
-  max-width: 1720px;
-  max-height: 710px;
+  //max-width: 1720px;
+  //max-height: 710px;
   display: grid;
-  margin-bottom: 6vw;
+  margin-bottom: 50px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-rows: min-content 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 30px;
   grid-auto-flow: row;
   grid-template-areas:
     "Title Title Nav"
@@ -15,7 +16,7 @@
 
 .Title {
   grid-area: Title;
-  margin: 50px 0 50px 0;
+  margin: 50px 0 10px 0;
 }
 
 .Nav {
@@ -30,11 +31,14 @@
 }
 
 .Nav div {
-  margin: 6px;
+  margin: 37px 0 0 12px;
+  //margin-left: 12px;
 }
 
 .Item1 {
   grid-area: Item1;
+  width: 410px;
+  height: 479px;
 }
 
 .Item2 {
@@ -51,4 +55,12 @@
 
 .Item5 {
   grid-area: Item5;
+}
+
+.Item2,
+.Item3,
+.Item4,
+.Item5 {
+  width: 411px;
+  height: 224px;
 }
