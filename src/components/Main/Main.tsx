@@ -13,27 +13,30 @@ import Brands from "../Brands/Brands.tsx";
 const Main = () => {
   return (
     <div className={styles.main}>
-      <div className={styles.mainScreen}>
-        <WaterMark />
-        <div className={styles.Title}>
-          <HeroSectionHero />
+        <div className={styles.mainContainer}>
+          <div className={styles.mainScreen}>
+            <WaterMark />
+            <div className={styles.Title}>
+              <HeroSectionHero />
+            </div>
+            <div className={styles.SubTitle}>
+              <HeroSectionTitle />
+            </div>
+            <div className={styles.BtnArea}>
+              <BtnScrollDown />
+            </div>
+            <div className={styles.SliderArea}>
+              <MainImagesSlider />
+            </div>
+            <div className={styles.ImageArea}></div>
+          </div>
+
+          <Catalogue />
+          <Bestsellers />
+          <Novelties />
+          <Brands />
+          <Feedback />
         </div>
-        <div className={styles.SubTitle}>
-          <HeroSectionTitle />
-        </div>
-        <div className={styles.BtnArea}>
-          <BtnScrollDown />
-        </div>
-        <div className={styles.SliderArea}>
-          <MainImagesSlider />
-        </div>
-        <div className={styles.ImageArea}></div>
-      </div>
-      <Catalogue />
-      <Bestsellers />
-      <Novelties />
-      <Brands />
-      <Feedback />
     </div>
   );
 };
