@@ -9,6 +9,7 @@
   margin: 0 auto;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
 }
 
 .catalogueCard img {
@@ -21,12 +22,15 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 46px;
   background: rgba(99, 118, 116, 0.8);
   font-family: Roboto, sans-serif;
-  font-size: 18.01px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 21.62px;
-  text-align: left;
   color: rgba(252, 252, 252, 1);
 }

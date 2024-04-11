@@ -3,43 +3,42 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 0 5.55vw;
+  width: 1280px;
 }
 
 .mainScreen {
  display: grid;
   grid-template-columns: 1fr 1fr min-content;
   grid-template-rows: min-content min-content min-content min-content;
-  gap: 10px 10px;
   grid-auto-flow: row;
   grid-template-areas:
     "Title Title ImageArea"
     "SubTitle SubTitle ImageArea"
     "BtnArea BtnArea ImageArea"
     "SliderArea SliderArea ImageArea";
+  margin-bottom: 50px;
 }
 
 .Title {
   grid-area: Title;
-  padding: 3.5vh 0 0 5.55vw;
+  margin: 50px 0 0 89px;
 }
 
 .SubTitle {
   grid-area: SubTitle;
-  padding: 0 6vw 1vh 6vw;
+  margin: 31px 155px 20px 112px;
 }
 
 .BtnArea {
   grid-area: BtnArea;
   display: flex;
   justify-content: center;
-  padding-left: 3.47vw;
+  padding-right: 24px;
 }
 
 .SliderArea {
   grid-area: SliderArea;
-  padding: 2.8vh 0.7vw 50px 4.375vw;
-
+  margin-top: 50px;
 }
 
 .ImageArea {
@@ -48,8 +47,8 @@
   background-position: center;
   background-size: auto 100%;
   background-repeat: no-repeat;
-  width: calc((40vw + 40vh) / 2);
-  height: calc((51vw + 51vh) / 2);
-  margin: 3.8vh 5.55vw 50px 0;
+  width: 411px;
+  height: 573px;
+  margin: 27px 0 0 0;
   cursor: pointer;
 }
