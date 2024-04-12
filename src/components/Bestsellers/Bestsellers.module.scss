@@ -1,9 +1,9 @@
 .bestsellers {
-  height: 655px;
+  height: 665px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: min-content min-content 1fr;
-  gap: 10px 10px;
+  grid-template-rows: min-content 52px 1fr;
+  gap: 30px 25.7px;
   grid-auto-flow: row;
   grid-template-areas:
     "title title title title"
@@ -13,14 +13,18 @@
 
 .title {
   grid-area: title;
-  margin: 50px 0 50px 0;
+  margin: 41px 0 3px 0;
 }
 
 .nav {
   grid-area: nav;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.nav div {
+  margin-top: 8px;
 }
 
 .cardArea1 {
@@ -44,6 +48,7 @@
 .cardArea3,
 .cardArea4 {
   display: flex;
+  margin-top: 8px;
   //justify-content: center;
   //align-items: center;
 }

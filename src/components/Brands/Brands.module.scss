@@ -5,11 +5,11 @@
 }
 
 .title {
-  margin: 50px 0 50px 0;
+  margin: 41px 0 32px 0;
 }
 
 .container {
-  width: 86.88vw;
+  //width: 86.88vw;
   height: 142px;
   position: relative;
 }
@@ -18,11 +18,13 @@
   display: flex;
   content: "";
   position: absolute;
-  width: 100vw;
+  //width: 100vw;
   height: 142px;
   background-color: #95B1AE;
   top: 0;
-  left: -6.5vw;
+  left: -101px;
+  right: -101px;
+  //left: -6.5vw;
   z-index: -1;
 }
 
