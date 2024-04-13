@@ -1,15 +1,15 @@
 import Header from "../../components/MainScreen/Header/Header.tsx";
-import { PropsWithChildren } from "react";
 import Footer from "../../components/MainScreen/Footer/Footer.tsx";
+import { Outlet } from "react-router-dom";
 
-const HeaderLayout = ({ children }: PropsWithChildren) => {
+const MainLayout = () => {
   return (
     <>
       <Header />
-      {children}
+      <Outlet />
       <Footer />
     </>
   );
 };
 
-export default HeaderLayout;
+export default MainLayout;
