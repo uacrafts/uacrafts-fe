@@ -1,14 +1,17 @@
 import "./App.module.scss";
-import HeaderLayout from "./layouts/HeaderLayout/HeaderLayout.tsx";
-import Main from "./components/Main/Main.tsx";
+import MainLayout from "./layouts/MainLayout/MainLayout.tsx";
+import Main from "./pages/Main/Main.tsx";
+import { Route, Routes } from "react-router-dom";
+import ProductDetails from "./pages/ProductDetails/ProductDetails.tsx";
 
 function App() {
   return (
-    <>
-      <HeaderLayout>
-        <Main />
-      </HeaderLayout>
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route path="" element={<Main />} />
+        <Route path="/product" element={<ProductDetails />} />
+      </Route>
+    </Routes>
   );
 }
 
