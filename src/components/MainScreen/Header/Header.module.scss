@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 18px 20px;
-  background: #FFFFFF;
   font-family: "Roboto", sans-serif;
   color: #66708a;
 
@@ -19,7 +18,7 @@
   }
   @media screen and (min-width: 1441px) {
     flex-direction: row;
-    padding: 10px 100px; /* Original padding for larger screens */
+    padding: 10px 80px; /* Original padding for larger screens */
   }
 }
 
@@ -81,7 +80,6 @@ a:hover {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 122px;
   height: 23px;
 }
