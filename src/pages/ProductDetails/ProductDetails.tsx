@@ -2,6 +2,7 @@ import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs.tsx";
 import React from "react";
 import styles from "./ProductDetails.module.scss";
 import candle from "../../../src/assets/images/kyivChestnutBig.png";
+import Tabs from "../../components/Tabs/Tabs.tsx";
 
 export interface BreadcrumbItem {
   path: string;
@@ -32,14 +33,316 @@ const productItems: BreadcrumbItem[] = [
   { path: "/product:id=1", label: 'Свічка "Київський каштан"' },
 ];
 
+const tabs = [
+  { id: 1, label: "Товар", sectionId: "product" },
+  { id: 2, label: "Опис", sectionId: "description" },
+  { id: 3, label: "Характеристики", sectionId: "characteristics" },
+  { id: 4, label: "Про виробника", sectionId: "aboutMaker" },
+  { id: 5, label: "Відгуки", sectionId: "reviews" },
+];
+
 const ProductDetails = () => {
   return (
     <div>
       <Breadcrumbs items={productItems} />
-      <div className={styles.wrapper}>
-        <div className={styles.productTitle}>Свічка "Київський каштан"</div>
+      <Tabs tabs={tabs} />
+      <section className={styles.wrapper}>
+        <div id="product" className={styles.productTitle}>
+          Свічка "Київський каштан"
+        </div>
         <img src={candle} alt="Candle" />
-      </div>
+        <div id="description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
+          expedita maxime minus, obcaecati pariatur praesentium provident rem
+          reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Autem expedita maxime
+          minus, obcaecati pariatur praesentium provident rem reprehenderit
+          sequi sit! Aperiam dolorem doloremque explicabo laboriosam, minima
+          officia quidem reiciendis suscipit? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Autem expedita maxime minus, obcaecati
+          pariatur praesentium provident rem reprehenderit sequi sit! Aperiam
+          dolorem doloremque explicabo laboriosam, minima officia quidem
+          reiciendis suscipit? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Autem expedita maxime minus, obcaecati pariatur
+          praesentium provident rem reprehenderit sequi sit! Aperiam dolorem
+          doloremque explicabo laboriosam, minima officia quidem reiciendis
+          suscipit? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Autem expedita maxime minus, obcaecati pariatur praesentium provident
+          rem reprehenderit sequi sit! Aperiam dolorem doloremque explicabo
+          laboriosam, minima officia quidem reiciendis suscipit?
+        </div>
+      </section>
     </div>
   );
 };
