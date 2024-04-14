@@ -1,6 +1,7 @@
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs.tsx";
 import React from "react";
 import styles from "./ProductDetails.module.scss";
+import candle from "./src/assets/images/Rectangle 10.png";
 
 export interface BreadcrumbItem {
   path: string;
@@ -37,7 +38,7 @@ const ProductDetails = () => {
       <Breadcrumbs items={productItems} />
       <div className={styles.wrapper}>
         <div className={styles.productTitle}>Свічка "Київський каштан"</div>
-        <img src="/src/assets/images/Rectangle 10.png" alt="Kandle" />
+        <img src={candle} alt="Candle" />
       </div>
     </div>
   );
