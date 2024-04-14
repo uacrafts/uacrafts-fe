@@ -1,0 +1,57 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 80px;
+  width: 100%;
+  height: 40px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      color: #364058;
+
+      &::before {
+        content: url("data:image/svg+xml,%3Csvg width='12' height='18' viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.11188 1.31876L0.433899 16.2533C0.194263 16.6657 0.388353 17.2228 0.86741 17.4976C1.34647 17.7724 1.92908 17.6609 2.16872 17.2485L10.8467 2.31395C11.0863 1.90154 10.8922 1.34444 10.4132 1.06963C9.93413 0.794813 9.35152 0.906353 9.11188 1.31876Z' fill='%2395B1AE' /%3E%3C/svg%3E");
+        width: 12px;
+        height: 18px;
+        margin-left: 5px;
+        margin-right: 4px;
+      }
+
+      &:first-child::before {
+        content: none;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        line-height: 140%;
+
+        &:hover {
+
+        }
+      }
+
+      &.active {
+        color: #627c7a;
+      }
+    }
+  }
+}

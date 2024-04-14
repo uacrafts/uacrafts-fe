@@ -1,0 +1,55 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 627px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.bigPhoto {
+  width: 627px;
+  max-height: 417px; /* Adjust as needed */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bigPhoto img {
+  width: 100%;
+  height: auto;
+}
+
+.navigation {
+  position: absolute;
+  top: 190px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  svg {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.previews {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.previews img {
+  width: 76px; /* Adjust as needed */
+  border-radius: 6px;
+  height: 76px;
+  margin: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.previews img.active {
+  border-color: #1b4744;;
+}
