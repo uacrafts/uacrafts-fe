@@ -1,7 +1,7 @@
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs.tsx";
 import React from "react";
 import styles from "./ProductDetails.module.scss";
-import candle from "./src/assets/images/Rectangle 10.png";
+import candle from "../../../src/assets/images/kyivChestnutBig.png";
 
 export interface BreadcrumbItem {
   path: string;
