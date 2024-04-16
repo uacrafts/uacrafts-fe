@@ -9,4 +9,15 @@
   left: 14.87px;
   top: 239.4px;
   z-index: -5;
+
+  @media screen and (min-width: 1880px) {
+    width: 1662px;
+    height: 192px;
+    top: 308px;
+    left: calc(50% - 1662px/2 - 120px);
+    font-size: 255.61px;
+    line-height: 47px;
+    /* or 18% */
+    //opacity: 0.03;
+  }
 }

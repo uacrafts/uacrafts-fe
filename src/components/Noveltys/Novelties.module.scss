@@ -2,6 +2,7 @@
   height: 665px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  //grid-template-columns: 300px 300px 300px 300px;
   grid-template-rows: min-content 52px 1fr;
   gap: 30px 25.7px;
   grid-auto-flow: row;
@@ -9,11 +10,19 @@
     "title title title title"
     "nav nav nav nav"
     "cardArea1 cardArea2 cardArea3 cardArea4";
+  @media screen and (min-width: 1880px) {
+    grid-template-rows: min-content 69px 1fr;
+    height: 884px;
+    gap: 30px 40px;
+  }
 }
 
 .title {
   grid-area: title;
   margin: 41px 0 3px 0;
+  @media screen and (min-width: 1880px) {
+    margin: 75px 0 18px 0;
+  }
 }
 
 .nav {
@@ -25,6 +34,9 @@
 
 .nav div {
   margin-top: 8px;
+  @media screen and (min-width: 1880px) {
+    margin-top: 10px;
+  }
 }
 
 .cardArea1 {
@@ -49,6 +61,5 @@
 .cardArea4 {
   display: flex;
   margin-top: 8px;
-  //justify-content: center;
-  //align-items: center;
+
 }
