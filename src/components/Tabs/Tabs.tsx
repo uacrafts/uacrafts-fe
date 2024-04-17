@@ -21,7 +21,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs }) => {
         {tabs.map((tab, index) => (
           <Link
             to={tab.sectionId}
-            offset={-116}
+            offset={-170}
             key={tab.id}
             className={`${styles.tab} ${activeTab === tab.id ? styles.active : ""}`}
             onClick={() => setActiveTab(tabs[index].id)}
