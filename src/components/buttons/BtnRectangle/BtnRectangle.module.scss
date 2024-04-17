@@ -1,6 +1,6 @@
 .btnRectangle {
   width: 13vw;
-  max-width: 188px;
+  max-width: 250px;
   line-height: 52px;
   border: 0.75px solid rgba(98, 124, 122, 1);
   border-radius: 8px;
@@ -9,7 +9,7 @@
   align-items: center;
   cursor: pointer;
   tab-index: 0;
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
 }
 
 .btnRectangle h3 {
@@ -18,9 +18,17 @@
   font-weight: 500;
   line-height: 21.62px;
   color: rgba(54, 64, 88, 1);
+  @media screen and (min-width: 1880px) {
+    font-size: 24px;
+  }
 }
 
 .btnRectangle:focus,
 .btnRectangle:hover {
   background-color: rgba(149, 177, 174, 1);
+}
+
+.btnRectangle:hover h3 {
+  color: #FCFCFC;
+  transition: all 0.4s ease-in-out 0s;
 }

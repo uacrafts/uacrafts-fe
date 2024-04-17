@@ -7,4 +7,11 @@
   line-height: 0.745em;
   letter-spacing: 0.1px;
   color: #1B4744;
+
+
+  @media screen and (min-width: 1880px) {
+  /* CraftLand 1920*/
+  font-size: 130px;
+  line-height: 0.750em;
+  }
 }

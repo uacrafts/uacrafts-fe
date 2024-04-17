@@ -7,9 +7,6 @@
   flex-direction: column;
   margin: 0 auto;
   width: 1280px;
-  @media screen and (min-width: 1880px) {
-    width: 1720px;
-  }
 }
 
 .mainScreen {
@@ -23,25 +20,16 @@
     "BtnArea BtnArea ImageArea"
     "SliderArea SliderArea ImageArea";
   margin-bottom: 50px;
-  @media screen and (min-width: 1880px) {
-    margin-bottom: 75px;
-  }
 }
 
 .Title {
   grid-area: Title;
   margin: 50px 0 0 89px;
-  @media screen and (min-width: 1880px) {
-    margin: 82px 0 0 125px;
-  }
 }
 
 .SubTitle {
   grid-area: SubTitle;
   margin: 31px 155px 20px 112px;
-  @media screen and (min-width: 1880px) {
-    margin: 32px 341px 31px 232px;
-  }
 }
 
 .BtnArea {
@@ -49,17 +37,11 @@
   display: flex;
   justify-content: center;
   padding-right: 24px;
-  @media screen and (min-width: 1880px) {
-    padding-right: 41px;
-  }
 }
 
 .SliderArea {
   grid-area: SliderArea;
   margin-top: 50px;
-  @media screen and (min-width: 1880px) {
-    margin-top: 73px;
-  }
 }
 
 .ImageArea {
@@ -72,9 +54,4 @@
   height: 573px;
   margin: 27px 0 0 0;
   cursor: pointer;
-  @media screen and (min-width: 1880px) {
-    width: 546px;
-    height: 764px;
-    margin: 36px 0 0 0;
-  }
 }

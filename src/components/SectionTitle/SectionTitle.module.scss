@@ -7,4 +7,8 @@
   font-weight: 500;
   line-height: 36px;
   color: #1B4744;
+  @media screen and (min-width: 1880px) {
+    font-size: 48px;
+    line-height: 24px;
+  }
 }
