@@ -12,6 +12,15 @@
   line-height: 140%;
   text-align: center;
   color: #627c7a;
+
+  @media screen and (max-width: 1030px) {
+    top: 155px;
+  }
+  @media screen and (max-width: 768px) {
+    top: 118px;
+    padding-left: 0;
+  }
+
 }
 
 .tabs {
@@ -26,6 +35,7 @@
   padding: 8px;
   width: 125px;
   height: 36px;
+  white-space: nowrap;
 }
 
 .active {

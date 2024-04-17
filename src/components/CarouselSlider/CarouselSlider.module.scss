@@ -1,15 +1,24 @@
 .carousel {
   position: relative;
   width: 100%;
-  max-width: 627px; /* Adjust as needed */
+  max-width: 627px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 
 .bigPhoto {
-  width: 627px;
-  max-height: 417px; /* Adjust as needed */
+  max-width: 627px;
+  max-height: 417px;
   border-radius: 8px;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    max-height: 300px; /* Adjust as needed */
+  }
 }
 
 .bigPhoto img {
@@ -32,24 +41,38 @@
       opacity: 0.8;
     }
   }
+
+  @media (max-width: 768px) {
+    top: 150px; /* Adjust as needed */
+  }
 }
 
 .previews {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
+
+  @media (max-width: 768px) {
+    overflow-x: scroll;
+    margin-top: 8px;
+  }
 }
 
 .previews img {
-  width: 76px; /* Adjust as needed */
+  max-width: 76px;
   border-radius: 6px;
-  height: 76px;
+  max-height: 76px;
   margin: 0;
   cursor: pointer;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+
+  @media (max-width: 768px) {
+    max-width: 55px; /* Adjust as needed */
+    max-height: 55px; /* Adjust as needed */
+  }
 }
 
 .previews img.active {
-  border-color: #1b4744;;
+  border-color: #1b4744;
 }

@@ -5,6 +5,11 @@
   flex-direction: column;
   padding-left: 80px;
 
+  @media (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .description {
     margin-top: 20px;
     font-family: "Roboto", sans-serif;
@@ -17,4 +22,5 @@
 
 .carousel {
   margin-top: 20px;
+  flex: 1;
 }
