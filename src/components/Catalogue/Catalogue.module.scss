@@ -10,6 +10,18 @@
     "Title Title Nav"
     "Item1 Item2 Item3"
     "Item1 Item4 Item5";
+  @media screen and (max-width: 1099px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Title Nav"
+    "Item1 Item2"
+    "Item1 Item4"
+    "Item3 Item5";
+  }
   @media screen and (min-width: 1880px) {
     grid-column-gap: 41px;
     grid-row-gap: 40px;
