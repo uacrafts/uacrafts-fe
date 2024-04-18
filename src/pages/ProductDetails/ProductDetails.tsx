@@ -5,6 +5,7 @@ import candle from "../../../src/assets/images/kyivChestnutBig.png";
 import leafs from "../../../src/assets/images/leaf.png";
 import Tabs from "../../components/Tabs/Tabs.tsx";
 import CarouselSlider from "../../components/CarouselSlider/CarouselSlider.tsx";
+import BtnBuy from "../../components/buttons/BtnBuy/BtnBuy.tsx";
 
 export interface BreadcrumbItem {
   path: string;
@@ -54,6 +55,7 @@ const ProductDetails = () => {
         <section id="product" className={styles.carousel}>
           <CarouselSlider photos={photos} />
         </section>
+        <BtnBuy title={"Купити"} />
         <div id="description" className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
           expedita maxime minus, obcaecati pariatur praesentium provident rem
