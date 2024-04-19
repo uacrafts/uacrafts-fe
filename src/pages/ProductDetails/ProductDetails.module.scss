@@ -4,23 +4,136 @@
   justify-content: start;
   flex-direction: column;
   padding-left: 80px;
+  padding-right: 80px;
 
   @media (max-width: 768px) {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
 
-  .description {
-    margin-top: 20px;
+.product {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 27px;
+
+  .carousel {
+
+  }
+
+  .price_and_delivery {
     font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+
+    .rate_and_number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .rate {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        height: 44px;
+
+        p {
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: #627c7a;
+
+          span {
+            color: #1b4744;
+          }
+        }
+      }
+      .number {
+        font-family: "Inter", sans-serif;
+
+        p {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+          color: #444861;
+        }
+
+        span {
+          color: #9c9fa8;
+        }
+      }
+    }
+
+    .price_quantity_buy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4px;
+
+      .price {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        color: #364058;
+      }
+
+      .quantity_and_buy {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+      }
+
+    }
+  }
+}
+
+.description {
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  color: #364058;
+}
+
+.product_name {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+
+  .product_name_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .like {
+      cursor: pointer;
+      &:hover {
+        fill: #364058;
+      }
+    }
+  }
+
+  h3 {
     font-weight: 500;
     font-size: 24px;
     line-height: 120%;
     color: #364058;
   }
-}
 
-.carousel {
-  margin-top: 20px;
-  flex: 1;
+  p {
+    padding-top: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #627c7a;
+  }
 }
