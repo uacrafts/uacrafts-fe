@@ -33,6 +33,7 @@ export type CallbackSubmittedModalProps = {
 };
 
 export type Feedback = {
+  date?: string;
   avatar: string;
   name: string;
   nickname: string;
