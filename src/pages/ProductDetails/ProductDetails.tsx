@@ -18,7 +18,7 @@ export interface BreadcrumbItem {
   label: string | React.JSX.Element;
 }
 
-const home = (
+export const home = (
   <svg
     width="24"
     height="24"
@@ -88,8 +88,8 @@ const price = 2500;
 // Breadcrumbs for a product page
 const productItems: BreadcrumbItem[] = [
   { path: "/", label: home },
-  { path: "/category", label: "Декор" },
-  { path: "/product:id=1", label: 'Свічка "Київський каштан"' },
+  { path: "/subcategory", label: "Декор" },
+  { path: "/subcategory/product:id=1", label: 'Свічка "Київський каштан"' },
 ];
 
 const tabs = [

@@ -1,0 +1,61 @@
+.container {
+  padding: 32px 80px 50px 80px;
+
+  @media (max-width: 765px) {
+    padding: 15px;
+  }
+
+  h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 120%;
+    color: #1b4744;
+  }
+
+  .subcategories {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+
+    @media (max-width: 1028px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 765px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .actionArea {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 59px;
+
+    button {
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      height: 46px;
+      width: 264px;
+      white-space: nowrap;
+      background-color: rgba(149, 177, 174, 1);
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    button h3 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 120%;
+      color: #fcfcfc;
+    }
+  }
+
+  .novelties {
+
+  }
+}
