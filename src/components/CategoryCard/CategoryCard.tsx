@@ -21,7 +21,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 }) => {
   return (
     <div className={styles.categoryCard}>
-      <Link to="/product:id=1">
+      <Link to="/subcategory/product:id=1">
         <div className={styles.imageArea}>
           <img src={srcImage} alt="Item of category" />
         </div>

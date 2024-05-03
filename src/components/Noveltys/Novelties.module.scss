@@ -1,5 +1,4 @@
 .novelties {
-  height: 665px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   //grid-template-columns: 300px 300px 300px 300px;
@@ -11,7 +10,6 @@
     "nav nav nav nav"
     "cardArea1 cardArea2 cardArea3 cardArea4";
   @media screen and (max-width: 1099px) {
-    height: 1000px;
     grid-template-columns: min-content 1fr 1fr;
     grid-template-rows: max-content 1fr 1fr;
     gap: 15px 15px;
@@ -20,6 +18,19 @@
     "nav cardArea1 cardArea2"
     "nav cardArea3 cardArea4";
   }
+
+  @media screen and (max-width: 765px) {
+    grid-template-columns: min-content 1fr 1fr;
+    grid-template-rows: max-content 1fr 1fr 1fr;
+    gap: 15px;
+    grid-template-areas:
+    "title title title"
+    "nav cardArea1 cardArea1"
+    "nav cardArea2 cardArea2"
+    "nav cardArea3 cardArea3"
+    "nav cardArea4 cardArea4";
+  }
+
   @media screen and (min-width: 1880px) {
     grid-template-rows: min-content 69px 1fr;
     height: 884px;

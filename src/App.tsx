@@ -3,13 +3,15 @@ import MainLayout from "./layouts/MainLayout/MainLayout.tsx";
 import Main from "./pages/Main/Main.tsx";
 import { Route, Routes } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails/ProductDetails.tsx";
+import SubCategory from "./pages/Category/SubCategory.tsx";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route path="" element={<Main />} />
-        <Route path="/product:id=1" element={<ProductDetails />} />
+        <Route path="/subcategory" element={<SubCategory />} />
+        <Route path="/subcategory/product:id=1" element={<ProductDetails />} />
       </Route>
     </Routes>
   );
