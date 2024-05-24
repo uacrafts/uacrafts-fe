@@ -39,3 +39,20 @@ export type Feedback = {
   nickname: string;
   comment: string;
 };
+
+export type CartItem = {
+  id: string;
+  name: string;
+  image: string;
+  price: number;
+  count: number;
+}
+
+export type CartPopupProps = {
+  items: CartItem[];
+  onClose: () => void;
+  onItemCountChange: (id: string, count: number) => void;
+  onItemRemove: (id: string) => void;
+  onContinueShopping: () => void;
+  onProceedToCheckout: () => void;
+}
