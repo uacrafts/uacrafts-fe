@@ -1,0 +1,33 @@
+.wrapper {
+  margin-left: 80px;
+  padding-top: 35px;
+}
+
+.mainContainer {
+  margin-top: 20px;
+  display: flex;
+}
+
+.sectionFilters {
+  width: 323px;
+}
+
+.cardsContainer {
+  width: 955px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.sortSelectorContainer {
+  height: 43px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 26px;
+  //flex-grow: 3;
+  //flex-shrink: ;
+}

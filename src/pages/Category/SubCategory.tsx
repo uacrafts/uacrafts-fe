@@ -19,7 +19,7 @@ const SubCategory = () => {
         <h1 className={styles.title}>Кераміка</h1>
         <div className={styles.subcategories}>
           {subcategories.map((item, index) => (
-            <CatalogueCard
+              <CatalogueCard
               title={item.title}
               key={index}
               srcImage={item.srcImage}
