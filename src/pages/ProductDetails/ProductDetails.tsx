@@ -1,8 +1,6 @@
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs.tsx";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ProductDetails.module.scss";
-import candle from "../../../src/assets/images/kyivChestnutBig.png";
-import leafs from "../../../src/assets/images/leaf.png";
 import Tabs from "../../components/Tabs/Tabs.tsx";
 import CarouselSlider from "../../components/CarouselSlider/CarouselSlider.tsx";
 import BtnBuy from "../../components/buttons/BtnBuy/BtnBuy.tsx";
@@ -12,6 +10,7 @@ import spiders from "../../assets/images/spiders.png";
 import CategoryCard from "../../components/CategoryCard/CategoryCard.tsx";
 import BtnArrow from "../../components/buttons/BtnArrows/BtnArrow.tsx";
 import { Link } from "react-router-dom";
+import { getProduct, Product as ProductType } from "../../api/getProduct.ts";
 
 export interface BreadcrumbItem {
   path: string;
@@ -83,8 +82,6 @@ const star_light = (
   </svg>
 );
 
-const price = 2500;
-
 // Breadcrumbs for a product page
 const productItems: BreadcrumbItem[] = [
   { path: "/", label: home },
@@ -109,9 +106,20 @@ const rate_individual = [
   star_light,
 ];
 
-const photos = [candle, leafs, candle, candle, candle, candle, candle];
-
 const ProductDetails = () => {
+  const [product, setProduct] = useState<ProductType | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    getProduct()
+      .then(setProduct)
+      .catch((error) => setError(error.message));
+  }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div>
       <Breadcrumbs items={productItems} />
@@ -119,12 +127,12 @@ const ProductDetails = () => {
       <section className={styles.wrapper}>
         <section id="product" className={styles.product}>
           <div className={styles.carousel}>
-            <CarouselSlider photos={photos} />
+            <CarouselSlider photos={product?.image_urls || []} />
           </div>
           <div className={styles.price_and_delivery}>
             <div className={styles.product_name}>
               <div className={styles.product_name_top}>
-                <h3>Свічка "Київський каштан"</h3>
+                <h3>{product?.title}</h3>
                 <svg
                   width="18"
                   height="17"
@@ -142,11 +150,13 @@ const ProductDetails = () => {
                   />
                 </svg>
               </div>
-              <p>Palaye svichka</p>
+              <p>{product?.brand.title}</p>
             </div>
             <div className={styles.rate_and_number}>
               <div className={styles.rate}>
-                {rate.map((item) => item)}{" "}
+                {rate.map((item, index) => (
+                  <div key={index}>{item}</div>
+                ))}{" "}
                 <p>
                   Відгуки: <span>(1)</span>
                 </p>
@@ -158,7 +168,9 @@ const ProductDetails = () => {
               </div>
             </div>
             <div className={styles.price_quantity_buy}>
-              <div className={styles.price}>{price} грн</div>
+              <div className={styles.price}>
+                {product?.price.regular_price} грн
+              </div>
               <div className={styles.quantity_and_buy}>
                 <QuantitySelector />
                 <BtnBuy title={"Купити"} />
@@ -198,12 +210,7 @@ const ProductDetails = () => {
           <div className={styles.details_data}>
             <div id="description" className={styles.description}>
               <h3 className={styles.description_title}>Опис</h3>
-              <p>
-                Свічка у формі листа київського каштану. Зроблена з натурального
-                соєвого воску. Хендмейд кераміка, соєвий віск, аромати: свіжа
-                дощова вода і ніжний цвіт каннабісу / свіжоскошена трава і
-                хмільне пиво
-              </p>
+              <p>{product?.description}</p>
             </div>
             <div id="characteristics" className={styles.characteristics}>
               <h3 className={styles.description_title}>Характеристики</h3>
@@ -237,7 +244,9 @@ const ProductDetails = () => {
                     <span className={styles.date}>{feedback.date}</span>
                   </p>
                   <div className={styles.rate}>
-                    {rate_individual.map((item) => item)}
+                    {rate_individual.map((item, index) => (
+                      <div key={index}>{item}</div>
+                    ))}
                   </div>
                   <p className={styles.comment}>{feedback.comment}</p>
                 </div>
